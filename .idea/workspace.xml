@@ -25,7 +25,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49bc09e9-ee7f-4fe8-8a70-f46d36498ec0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/footer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
@@ -202,7 +201,7 @@
       <workItem from="1592331976175" duration="1691000" />
       <workItem from="1592334010214" duration="2410000" />
       <workItem from="1592345282240" duration="11278000" />
-      <workItem from="1592395639869" duration="5266000" />
+      <workItem from="1592395639869" duration="10386000" />
     </task>
     <servers />
   </component>
@@ -230,10 +229,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="236" y="14" width="998" height="714" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592346694350" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1592354077802">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1592413157407">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1592354077802" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1592413157407" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592331848239">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

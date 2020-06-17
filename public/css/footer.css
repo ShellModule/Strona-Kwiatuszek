@@ -8,15 +8,16 @@
 
 .f-rows {
     display: inline-flex;
-    padding: 50px 40px;
+    padding: 50px 40px 20px 40px;
 }
 
 .f-single_row {
     color: rgb(247, 247, 247);
+    padding-bottom: 35px;
 }
 
 .f-row_title {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     padding-bottom: 10px;
     text-align: left;
     font-size: 22px;
@@ -24,9 +25,13 @@
 }
 
 .f-row_text {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     word-wrap: break-word;
     text-align: left;
     font-size: 16px;
     font-weight: normal;
+}
+
+.f-media_wrapper a {
+    text-decoration: none;
 }
