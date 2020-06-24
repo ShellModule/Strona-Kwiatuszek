@@ -14,4 +14,12 @@ class HomepageController extends AbstractController
     {
         return $this->render('homepage/homepage.html.twig');
     }
+
+    /**
+     * @Route("/gallery", name="gallery")
+     */
+    public function gallery()
+    {
+        return $this->render('gallery/gallery.html.twig');
+    }
 }

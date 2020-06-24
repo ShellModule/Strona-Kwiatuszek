@@ -102,22 +102,17 @@
     z-index: 3;
 }
 
-.s2-hl-container {
+.flex-center {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.flex-center {
+.flex-wrap-center {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-}
-
-.s2-hl-wrapper {
-    width: 100%;
-    height: 100%;
 }
 
 .s2-hl-text {
