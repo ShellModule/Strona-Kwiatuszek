@@ -50,7 +50,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.25s ease-out
+    transition: all 0.3s ease-out
 }
 
 .f-phone_circle:hover {
@@ -70,7 +70,7 @@
 .s2-col img {
     background-position: top;
     position: initial;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -102,6 +102,46 @@
     z-index: 3;
 }
 
+.s2-hl-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.s2-hl-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.s2-hl-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    padding: 0;
+    text-align: right;
+    color: rgb(90, 88, 88);
+}
+
+.s2-button-bg {
+    background-color: rgb(233, 179, 168);
+    color: white;
+    border-radius: 6px;
+    height: 50px;
+    width: 50px;
+    margin: 0;
+    max-height: 50px;
+    max-width: 50px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.s2-button-bg:hover {
+    background-color: white;
+    color: rgb(233, 179, 168);
+}
+
 @media (min-width: 768px) {
     .s2-col {
         height: 33vw;
@@ -111,7 +151,7 @@
 
     .s2-col:after {
         opacity: 0;
-        transition: all 0.25s ease;
+        transition: all 0.3s ease;
     }
 
     .s2-col:hover:after {
@@ -123,12 +163,25 @@
         visibility: hidden;
         opacity: 0;
         font-size: 30px;
-        transition: visibility 0.25s ease-in-out, opacity 0.25s ease-in-out;
+        transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
 
     .s2-col:hover .s2-img_text {
         visibility: visible;
         opacity: 1;
+    }
+
+    .s2-hl-container {
+        padding: 40px;
+    }
+
+    .s2-hl-text {
+        font-size: 36px;
+    }
+
+    .s2-hl-wrapper {
+        margin-left: 155px;
+        margin-right: 155px;
     }
 }
 
@@ -136,11 +189,20 @@
     .s2-col {
         height: 50vw;
     }
+
+    .s2-hl-container {
+        padding: 15px 0 15px 0;
+    }
+
+    .s2-hl-text {
+        word-spacing: 100vw;
+        font-size: 22px;
+    }
 }
 
 a {
     color: #f7f7f7;
-    transition: all 0.25s ease-out;
+    transition: all 0.3s ease-out;
     margin-right: 20px;
     margin-top: 10px;
     font-size: 1.4rem;
