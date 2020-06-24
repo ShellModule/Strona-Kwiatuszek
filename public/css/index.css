@@ -108,6 +108,13 @@
     justify-content: center;
 }
 
+.flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .s2-hl-wrapper {
     width: 100%;
     height: 100%;
@@ -117,23 +124,20 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     padding: 0;
-    text-align: right;
+    margin-right: 10px;
     color: rgb(90, 88, 88);
+    float: left;
 }
 
 .s2-button-bg {
     background-color: rgb(233, 179, 168);
     color: white;
     border-radius: 6px;
-    height: 50px;
-    width: 50px;
     margin: 0;
-    max-height: 50px;
-    max-width: 50px;
-    font-size: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    float: left;
     transition: all 0.3s ease-in-out;
 }
 
@@ -177,15 +181,25 @@
 
     .s2-hl-text {
         font-size: 36px;
+        min-height: 50px;
+        max-height: 50px;
     }
 
     .s2-hl-wrapper {
-        margin-left: 155px;
-        margin-right: 155px;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    .s2-button-bg {
+        height: 50px;
+        width: 50px;
+        max-height: 50px;
+        max-width: 50px;
+        font-size: 1.2rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
     .s2-col {
         height: 50vw;
     }
@@ -195,8 +209,16 @@
     }
 
     .s2-hl-text {
-        word-spacing: 100vw;
-        font-size: 22px;
+        font-size: 20px;
+        min-height: 40px;
+    }
+
+    .s2-button-bg {
+        height: 40px;
+        width: 40px;
+        max-height: 40px;
+        max-width: 40px;
+        font-size: 1rem
     }
 }
 
