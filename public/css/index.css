@@ -272,3 +272,109 @@ a:hover {
     color: #c8c8c8;
     text-decoration: none;
 }
+
+.navbar{
+    z-index: 999;
+}
+
+.navbar-nav{
+    padding-right: 0;
+    float: right;
+    
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.nav-item{
+    color: white;
+    font-family: 'Montserrat';
+   letter-spacing: 0.48px;
+
+}
+
+.nav-item.active{
+    background-color: rgb(231, 85, 170);
+    color: white;
+}
+
+.navbar-light .navbar-nav .active>.nav-link{
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: white;
+    background-color: rgb(231, 85, 170);
+ 
+}
+
+.h a{
+    color: #f7f7f7;
+    transition: all 0.25s ease-out;
+    margin-right: 0px;
+    margin-top: 0px;
+    font-size: 1.4rem;
+    font-size: 16px;
+
+    padding: 10px 40px;
+    
+}
+
+.h li{
+    margin-left: 15px;
+}
+.h-container{
+    z-index: 3;
+}
+
+.parallax {
+      
+    /* Set a specific height */
+    height: 700px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-position: 100px;
+  }
+
+.bg-light{
+      background-color: transparent!important;
+}
+.mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.15);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.header-title{
+    font-family: "Dancing Script";
+    font-weight: 700;
+    font-size: 85px;
+    color: white;
+    position: relative;
+    z-index: 999;
+    margin-top: 120px; 
+   
+}
+
+.header-title2{
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 24px;
+    color: white;
+    position: relative;
+    z-index: 999;
+}
