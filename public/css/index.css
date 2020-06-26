@@ -141,6 +141,49 @@
     color: rgb(233, 179, 168);
 }
 
+.gallery-container {
+    padding: 40px;
+}
+
+.gallery-section-wrapper {
+    position: relative;
+    max-width: 1080px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-text {
+    font-family: 'Dancing Script', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    color: #515151;
+}
+
+.gallery-img {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 5px;
+    width: 100%;
+    height: 26.5vw;
+    max-height: 360px;
+
+}
+
+.gallery-img img {
+    object-position: center;
+    background-position: top;
+    position: initial;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-img:hover img {
+    transform: scale(1.1);
+}
+
 @media (min-width: 768px) {
     .s2-col {
         height: 33vw;

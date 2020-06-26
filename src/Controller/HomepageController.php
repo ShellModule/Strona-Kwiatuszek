@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Finder\Finder;
 
 class HomepageController extends AbstractController
 {
@@ -20,6 +21,8 @@ class HomepageController extends AbstractController
      */
     public function gallery()
     {
-        return $this->render('gallery/gallery.html.twig');
+        $finder = new Finder();
+        $finder->files()->in("../public/imgs/");
+        return $this->render('gallery/gallery.html.twig', array('imgs' => $finder));
     }
 }

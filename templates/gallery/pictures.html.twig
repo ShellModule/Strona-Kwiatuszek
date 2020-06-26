@@ -1,5 +1,29 @@
-<div class="gallery">
-    <a href="{{ asset("imgs/work/bukiety.jpg") }}">
-        <img src="{{ asset("imgs/work/bukiety.jpg") }}" alt="First image">
-    </a>
+<div class="container-fluid p-0">
+    <div class="container-fluid gallery-container">
+        <div class="gallery-section-wrapper">
+            <div class="gallery-section">
+                <div class="gallery-text">
+                    Bukiety
+                </div>
+                <div class="row m-0 p-0">
+                    {% for pic in imgs %}
+                        {% if pic.getPathname()|slice(10)|slice(5, 8) == "bouquets" %}
+                            <div class="col-4 gallery-img">
+                                <img src="{{ asset( pic.getPathname()|slice(10)|replace({'\\':'/'}) ) }}"
+                                     class="img-responsive s2-img"
+                                     alt="FlorystykaPogrzebowa">
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="gallery-text">Bukiety ślubne</div>
+    <div class="gallery-text">Kosze okolicznościowe</div>
+    <div class="gallery-text">Wieńce</div>
+    <div class="gallery-text">Dekoracja sal i kościołów</div>
+    <div class="gallery-text">Pozostałe kompozycje</div>
+
 </div>
