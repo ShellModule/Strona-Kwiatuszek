@@ -21,8 +21,21 @@ class HomepageController extends AbstractController
      */
     public function gallery()
     {
-        $finder = new Finder();
-        $finder->files()->in("../public/imgs/");
-        return $this->render('gallery/gallery.html.twig', array('imgs' => $finder));
+        $bouquets = (new Finder())->files()->in("../public/imgs/bouquets");
+        $wedding = (new Finder())->files()->in("../public/imgs/wedding");
+        $baskets = (new Finder())->files()->in("../public/imgs/baskets");
+        $rings = (new Finder())->files()->in("../public/imgs/rings");
+        $halls = (new Finder())->files()->in("../public/imgs/halls");
+        $other = (new Finder())->files()->in("../public/imgs/other");
+        return $this->render('gallery/gallery.html.twig',
+            array(
+                'bouquets' => $bouquets,
+                'wedding' => $wedding,
+                'baskets' => $baskets,
+                'rings' => $rings,
+                'halls' => $halls,
+                'other' => $other
+            )
+        );
     }
 }

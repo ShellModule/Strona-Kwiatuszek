@@ -33,10 +33,6 @@
     font-weight: normal;
 }
 
-.f-media_wrapper a {
-    text-decoration: none;
-}
-
 .f-phone_circle {
     height: 50px;
     width: 50px;
@@ -57,14 +53,10 @@
     background-color: #2f41a5;
 }
 
-.f-link {
-    font-size: 16px;
-    margin-top: 0;
-}
-
 .s2-col {
     padding: 0;
     overflow: hidden;
+    max-width: 100%;
 }
 
 .s2-col img {
@@ -122,6 +114,11 @@
     margin-right: 10px;
     color: rgb(90, 88, 88);
     float: left;
+    transition: all 0.3s ease-out;
+}
+
+.s2-hl-text:hover {
+    color: rgb(125, 125, 125);
 }
 
 .s2-button-bg {
@@ -139,6 +136,15 @@
 .s2-button-bg:hover {
     background-color: white;
     color: rgb(233, 179, 168);
+}
+
+.black-bg {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 5
 }
 
 .gallery-container {
@@ -164,10 +170,12 @@
     box-sizing: border-box;
     overflow: hidden;
     padding: 5px;
-    width: 100%;
-    height: 26.5vw;
-    max-height: 360px;
+}
 
+.gallery-img div {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .gallery-img img {
@@ -180,13 +188,41 @@
     object-fit: cover;
 }
 
+@media screen and (min-width: 1200px) {
+    .gallery-img {
+        width: 255px;
+        height: 265px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px ) {
+    .gallery-img {
+        width: 210px;
+        height: 220px;
+    }
+}
+
 .gallery-img:hover img {
     transform: scale(1.1);
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .gallery-img {
+        width: 150px;
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .gallery-img {
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+@media screen and (min-width: 992px) {
     .s2-col {
-        height: 33vw;
+        height: 100%;
         max-height: 370px;
         overflow: hidden;
     }
@@ -237,9 +273,10 @@
     }
 }
 
-@media (max-width: 767.98px) {
+@media screen and (max-width: 991px) {
     .s2-col {
         height: 50vw;
+        max-height: 370px;
     }
 
     .s2-hl-container {
@@ -258,9 +295,17 @@
         max-width: 40px;
         font-size: 1rem
     }
+
 }
 
-a {
+@media screen and (max-width: 767px) {
+    .gallery-img {
+        width: 378px;
+        height: 190px;
+    }
+}
+
+.f-media_wrapper a {
     color: #f7f7f7;
     transition: all 0.3s ease-out;
     margin-right: 20px;
@@ -268,53 +313,66 @@ a {
     font-size: 1.4rem;
 }
 
-a:hover {
+.f-media_wrapper a:hover {
     color: #c8c8c8;
     text-decoration: none;
 }
 
-.navbar{
+.f-link {
+    color: #f7f7f7;
+    transition: all 0.3s ease-out;
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.f-link:hover {
+    color: #c8c8c8;
+    text-decoration: none;
+}
+
+.navbar {
     z-index: 999;
 }
 
-.navbar-nav{
+.navbar-nav {
     padding-right: 0;
     float: right;
-    
+
 }
 
-.navbar-expand-lg .navbar-nav .nav-link{
+.navbar-expand-lg .navbar-nav .nav-link {
     padding-left: 15px;
     padding-right: 15px;
 }
 
 
-.nav-item{
+.nav-item {
     color: white;
     font-family: 'Montserrat';
-   letter-spacing: 0.48px;
+    letter-spacing: 0.48px;
 
 }
 
-.nav-item.active{
+.nav-item.active {
     background-color: rgb(231, 85, 170);
     color: white;
 }
 
-.navbar-light .navbar-nav .active>.nav-link{
+.navbar-light .navbar-nav .active > .nav-link {
     color: white;
 }
 
-.navbar-light .navbar-nav .nav-link{
+.navbar-light .navbar-nav .nav-link {
     color: white;
 }
-.navbar-light .navbar-nav .nav-link:hover{
+
+.navbar-light .navbar-nav .nav-link:hover {
     color: white;
     background-color: rgb(231, 85, 170);
- 
+
 }
 
-.h a{
+.h a {
     color: #f7f7f7;
     transition: all 0.25s ease-out;
     margin-right: 0px;
@@ -323,54 +381,56 @@ a:hover {
     font-size: 16px;
 
     padding: 10px 40px;
-    
+
 }
 
-.h li{
+.h li {
     margin-left: 15px;
 }
-.h-container{
+
+.h-container {
     z-index: 3;
 }
 
 .parallax {
-      
+
     /* Set a specific height */
     height: 700px;
-  
+
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     object-position: 100px;
-  }
-
-.bg-light{
-      background-color: transparent!important;
 }
-.mask{
+
+.bg-light {
+    background-color: transparent !important;
+}
+
+.mask {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.15);
+    background-color: rgba(0, 0, 0, 0.15);
     width: 100%;
     height: 100%;
     z-index: 2;
 }
 
-.header-title{
+.header-title {
     font-family: "Dancing Script";
     font-weight: 700;
     font-size: 85px;
     color: white;
     position: relative;
     z-index: 999;
-    margin-top: 120px; 
-   
+    margin-top: 120px;
+
 }
 
-.header-title2{
+.header-title2 {
     font-family: "Montserrat";
     font-weight: 300;
     font-size: 24px;
