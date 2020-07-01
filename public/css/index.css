@@ -215,109 +215,6 @@
     transform: scale(1.1);
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    .gallery-img {
-        width: 150px;
-        height: 160px;
-    }
-}
-
-@media screen and (max-width: 575px) {
-    .gallery-img {
-        left: 50%;
-        transform: translate(-50%);
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .s2-col {
-        height: 100%;
-        max-height: 370px;
-        overflow: hidden;
-    }
-
-    .s2-col:after {
-        opacity: 0;
-        transition: all 0.3s ease;
-    }
-
-    .s2-col:hover:after {
-        display: block;
-        opacity: 1;
-    }
-
-    .s2-img_text {
-        visibility: hidden;
-        opacity: 0;
-        font-size: 30px;
-        transition: visibility 0.4s ease-out, opacity 0.4s ease-out;
-    }
-
-    .s2-col:hover .s2-img_text {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .s2-hl-container {
-        padding: 40px;
-    }
-
-    .s2-hl-text {
-        font-size: 36px;
-        min-height: 50px;
-        max-height: 50px;
-    }
-
-    .s2-hl-wrapper {
-        margin-left: 10vw;
-        margin-right: 10vw;
-    }
-
-    .s2-button-bg {
-        height: 50px;
-        width: 50px;
-        max-height: 50px;
-        max-width: 50px;
-        font-size: 1.2rem;
-    }
-}
-
-@media screen and (max-width: 991px) {
-    .s2-col {
-        height: 50vw;
-        max-height: 370px;
-    }
-
-    .s2-img_text {
-        font-size: 14px;
-    }
-
-    .s2-hl-container {
-        padding: 15px 0 15px 0;
-    }
-
-    .s2-hl-text {
-        font-size: 20px;
-        min-height: 40px;
-    }
-
-    .s2-button-bg {
-        height: 40px;
-        width: 40px;
-        max-height: 40px;
-        max-width: 40px;
-        font-size: 1rem
-    }
-
-}
-
-@media screen and (max-width: 767px) {
-    .gallery-img {
-        width: 378px;
-        height: 190px;
-    }
-}
-
 .f-media_wrapper a {
     color: #f7f7f7;
     transition: all 0.3s ease-out;
@@ -382,7 +279,11 @@
 .navbar-light .navbar-nav .nav-link:hover {
     color: white;
     background-color: rgb(231, 85, 170);
+}
 
+.navbar-light .navbar-nav .nav-link:focus{
+    color: white;
+    text-decoration: none;
 }
 
 .h a {
@@ -428,7 +329,7 @@
     left: 0;
     background-color: rgba(0, 0, 0, 0.15);
     width: 100%;
-    height: 100%;
+    height: 150%;
     z-index: 2;
 }
 
@@ -438,9 +339,8 @@
     font-size: 85px;
     color: white;
     position: relative;
-    z-index: 999;
-    margin-top: 120px;
-
+    z-index: 6;
+    margin-top: 120px; 
 }
 
 .header-title2 {
@@ -449,5 +349,267 @@
     font-size: 24px;
     color: white;
     position: relative;
-    z-index: 999;
+    z-index: 6;
+}
+
+.content{
+    position: relative;
+    z-index: 4;
+}
+
+.hamburger{
+    display:none;
+    transform: scale(0.7);
+}
+
+.white-icon{
+
+    display: none;
+
+}
+
+.h-short{
+    height: 220px;
+    background-attachment: scroll;
+}
+.flex-center-icon{
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform:translateX(-50%);
+}
+
+@media (min-width: 992px) {
+        .s2-col {
+        height: 100%;
+        max-height: 370px;
+        overflow: hidden;
+    }
+
+    .s2-col:after {
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .s2-col:hover:after {
+        display: block;
+        opacity: 1;
+    }
+
+    .s2-img_text {
+        visibility: hidden;
+        opacity: 0;
+        font-size: 30px;
+        transition: visibility 0.4s ease-out, opacity 0.4s ease-out;
+    }
+
+    .s2-col:hover .s2-img_text {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .s2-hl-container {
+        padding: 40px;
+    }
+
+    .s2-hl-text {
+        font-size: 36px;
+        min-height: 50px;
+        max-height: 50px;
+    }
+
+    .s2-hl-wrapper {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    .s2-button-bg {
+        height: 50px;
+        width: 50px;
+        max-height: 50px;
+        max-width: 50px;
+        font-size: 1.2rem;
+    }
+  
+    .h-button-pos{
+        float: left;
+    }
+    .navbar-collapse{
+        display:block !important;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .gallery-img {
+        width: 150px;
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .gallery-img {
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .gallery-img {
+        width: 378px;
+        height: 190px;
+    }
+}
+
+@media (max-width: 991px) {
+    .s2-col {
+        height: 50vw;
+        max-height: 370px;
+    }
+
+    .s2-hl-container {
+        padding: 15px 0 15px 0;
+    }
+  
+    .s2-img_text {
+        font-size: 14px;
+    }
+
+    .s2-hl-text {
+        font-size: 20px;
+        min-height: 40px;
+    }
+
+    .s2-button-bg {
+        height: 40px;
+        width: 40px;
+        max-height: 40px;
+        max-width: 40px;
+        font-size: 1rem
+    }
+
+    .h-navbar-m{
+        position: relative;
+        padding: 20px 10px;
+        background-color: white!important;
+        width: 100%;
+        left: 0;
+        position:fixed;
+        box-shadow: 0px 5px 17px 4px lightgrey;
+    }
+    .h-logo-m{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%) translateY(-55px) scale(0.5);
+    }
+    .h-hamburger-m{
+        float:right;
+        /* order: 1; */
+    }
+  
+    .hamburger{
+        z-index: 10;
+        display:block;
+    }
+  
+    .h-menu-m{
+        position:fixed;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        background-color: rgba(233, 179, 168, 1);
+        width: 100vw;
+        height: 100vh;
+        z-index:7;
+
+    }
+  
+    .nav-item.active{
+        background-color: transparent!important;
+    }
+
+    .navbar-light .navbar-nav .nav-link{
+        color: rgba(236, 236, 236, 1);
+        transition: all 0.5s ease-out;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover{
+        background-color:transparent!important;
+        text-decoration: underline;
+        font-weight: bold;
+        color: white;
+    }
+  
+    .h {
+        display: block;
+        text-align: center;
+        margin-top: 15%;
+    }
+  
+    .navbar-nav{
+        float:unset;
+    }
+    
+    .header-title{
+        transform:scale(0.7);
+        float: left;
+        left: -60px;
+        margin-top: 200px;
+        font-size: 100px;
+    }
+  
+    .header-title2{
+        transform:scale(0.7);
+        float: right;
+        right: -50px;
+        text-align: right;
+        font-size: 34px;
+    }
+
+    .far, .fab{
+        display:block;
+        color: black;
+    }
+
+    .white-icon{
+        width: 41px;
+        height: 41px;
+        border-radius: 50%;
+        padding: 10px 10px;
+        margin: 12px 12px;
+        bottom: -50px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: inline-block;
+    }
+  
+    .flex-center-icon{
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: center; */
+        display: unset;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform:translateX(-44%);
+    }
+
+    .h li{
+        margin-left: 0px;
+    }
+
+    a.social-media{
+        padding: unset;
+    }
+
+    .h-short{
+        height:100px;
+    }
 }
