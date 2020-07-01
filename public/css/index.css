@@ -466,6 +466,10 @@
         width: 378px;
         height: 190px;
     }
+
+    .gallery-text {
+        font-size: 36px;
+    }
 }
 
 @media (max-width: 991px) {
