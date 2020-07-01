@@ -2,7 +2,7 @@
     <div class="container gallery-container">
         <div class="gallery-section-wrapper">
             <div class="gallery-section">
-                <a id="g-bouquets">
+                <a id="bouquets">
                     <div class="gallery-text">
                         Bukiety
                     </div>
@@ -27,7 +27,7 @@
     <div class="container gallery-container">
         <div class="gallery-section-wrapper">
             <div class="gallery-section">
-                <a id="g-wedding">
+                <a id="wedding_bouquets">
                     <div class="gallery-text">
                         Bukiety ślubne
                     </div>
@@ -52,7 +52,7 @@
     <div class="container gallery-container">
         <div class="gallery-section-wrapper">
             <div class="gallery-section">
-                <a id="g-baskets">
+                <a id="baskets">
                     <div class="gallery-text">
                         Kosze okolicznościowe
                     </div>
@@ -77,19 +77,19 @@
     <div class="container gallery-container">
         <div class="gallery-section-wrapper">
             <div class="gallery-section">
-                <a id="g-rings">
+                <a id="wreaths">
                     <div class="gallery-text">
                         Wieńce
                     </div>
                 </a>
                 <div class="row m-0 p-0">
-                    {% for pic in rings %}
+                    {% for pic in wreaths %}
                         {% if pic.getPathname() %}
                             <div class="col-md-3 col-xs-12 col-sm-12 gallery-img">
                                 <div>
                                     <a href="{{ asset( pic.getPathname()|slice(10)|replace({'\\':'/'}) ) }}">
                                         <img src="{{ asset( pic.getPathname()|slice(10)|replace({'\\':'/'}) ) }}"
-                                             alt="rings">
+                                             alt="wreaths">
                                     </a>
                                 </div>
                             </div>
@@ -102,7 +102,7 @@
     <div class="container gallery-container">
         <div class="gallery-section-wrapper">
             <div class="gallery-section">
-                <a id="g-halls">
+                <a id="halls">
                     <div class="gallery-text">
                         Dekoracja sal i kościołów
                     </div>
@@ -127,7 +127,7 @@
     <div class="container gallery-container">
         <div class="gallery-section-wrapper">
             <div class="gallery-section">
-                <a id="g-other">
+                <a id="other">
                     <div class="gallery-text">
                         Pozostałe kompozycje
                     </div>

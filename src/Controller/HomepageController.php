@@ -24,7 +24,7 @@ class HomepageController extends AbstractController
         $bouquets = (new Finder())->files()->in("../public/imgs/bouquets");
         $wedding = (new Finder())->files()->in("../public/imgs/wedding");
         $baskets = (new Finder())->files()->in("../public/imgs/baskets");
-        $rings = (new Finder())->files()->in("../public/imgs/rings");
+        $wreaths = (new Finder())->files()->in("../public/imgs/wreaths");
         $halls = (new Finder())->files()->in("../public/imgs/halls");
         $other = (new Finder())->files()->in("../public/imgs/other");
         return $this->render('gallery/gallery.html.twig',
@@ -32,7 +32,7 @@ class HomepageController extends AbstractController
                 'bouquets' => $bouquets,
                 'wedding' => $wedding,
                 'baskets' => $baskets,
-                'rings' => $rings,
+                'wreaths' => $wreaths,
                 'halls' => $halls,
                 'other' => $other
             )
