@@ -315,7 +315,14 @@ a:hover {
     transform: scale(0.7);
 }
 
-@media (min-width: 768px) {
+.white-icon{
+
+    display: none;
+
+}
+
+
+@media (min-width: 992px) {
     .s2-col {
         height: 33vw;
         max-height: 370px;
@@ -369,9 +376,13 @@ a:hover {
     .h-button-pos{
         float: left;
     }
+    .navbar-collapse{
+        display:block !important;
+    }
+
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991px) {
     .s2-col {
         height: 50vw;
     }
@@ -398,8 +409,9 @@ a:hover {
         padding: 20px 10px;
 
         background-color: white!important;
-        width: 100vw;
-        left: -30px;
+        width: 100%;
+        left: 0;
+        position:fixed;
     }
     .h-logo-m{
     position: absolute;
@@ -457,14 +469,51 @@ a:hover {
         transform:scale(0.7);
         float: left;
         left: -60px;
+        margin-top: 200px;
+        font-size: 100px;
     }
     .header-title2{
         transform:scale(0.7);
         float: right;
         right: -50px;
         text-align: right;
-        font-size:30px;
+        font-size: 34px;
     }
 
+    .far, .fab{
+        display:block;
+        color: black;
+    }
+
+    .white-icon{
+        width: 41px;
+        height: 41px;
+        border-radius: 50%;
+        padding: 10px 10px;
+        margin: 12px 12px;
+        bottom: -50px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: inline-block;
+
+    }
+    .flex-center-icon{
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: center; */
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform:translateX(-50%);
+    }
+
+    .h li{
+        margin-left: 0px;
+    }
+    a.social-media{
+        padding: unset;
+    }
 
 }
