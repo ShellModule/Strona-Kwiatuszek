@@ -1,45 +1,88 @@
-<div class="container-fluid">
-<div style="transform:translateY(-100px)" id="4"></div>
-    <div class="row row-cols-md-3 row-cols-sm-2 row-cols-2" style="background-color: black">
-        <div class="col-md-4 col-sm-6 s2-col">
-            <div class="s2-img_text">BUKIETY</div>
-            <img src="{{ asset('imgs/work/bukiety.jpg') }}" class="img-responsive s2-img" alt="Bukiety">
-        </div>
-        <div class="col-md-4 col-sm-6 s2-col">
-            <div class="s2-img_text">BUKIETY ŚLUBNE</div>
-            <img src="{{ asset('imgs/work/bukietyslubne.jpg') }}" class="img-responsive s2-img" alt="BukietySlubne">
-        </div>
-        <div class="col-md-4 col-sm-6 s2-col">
-            <div class="s2-img_text">KOSZE OKOLICZNOŚCIOWE</div>
-            <img src="{{ asset('imgs/work/koszeokolicznosciowe.jpg') }}" class="img-responsive s2-img"
-                 alt="KoszeOkolicznosciowe">
-        </div>
-        <div class="col-md-4 col-sm-6 s2-col">
-            <div class="s2-img_text">FLORYSTYKA POGRZEBOWA</div>
-            <img src="{{ asset('imgs/work/florystykapogrzebowa.jpg') }}" class="img-responsive s2-img"
-                 style="object-position: top"
-                 alt="FlorystykaPogrzebowa">
-        </div>
-        <div class="col-md-4 col-sm-6 s2-col">
-            <div class="s2-img_text">DEKORACJE SAL</div>
-            <img src="{{ asset('imgs/work/dekoracjesal.jpg') }}" class="img-responsive s2-img"
-                 style="object-position: center right" alt="DekoracjeSal">
-        </div>
-        <div class="col-md-4 col-sm-6 s2-col">
-            <div class="s2-img_text">POZOSTAŁE USŁUGI FLORYSTYCZNE</div>
-            <img src="{{ asset('imgs/work/pozostaleuslugiflorystyczne.jpg') }}" class="img-responsive s2-img"
-                 style="object-position: center left"
-                 alt="PozostaleUslugiFlorystyczne">
-        </div>
+<div class="container-fluid p-0">
+    <div class="row row-cols-md-3 row-cols-sm-2 row-cols-2 m-0">
+        <a href="/gallery#bouquets">
+            <div class="col-md-4 col-sm-6 s2-col"
+                 data-aos="fade-zoom-in"
+                 data-aos-easing="ease-in-back"
+                 data-aos-delay="0"
+                 data-aos-once="true"
+            >
+                <h3 class="s2-img_text">BUKIETY</h3>
+                <img src="{{ asset('imgs/work/bukiety.jpg') }}" class="img-responsive" alt="Bukiety">
+            </div>
+        </a>
+        <a href="/gallery#wedding_bouquets">
+            <div class="col-md-4 col-sm-6 s2-col"
+                 data-aos="fade-zoom-in"
+                 data-aos-easing="ease-in-back"
+                 data-aos-delay="100"
+                 data-aos-once="true"
+            >
+                <h3 class="s2-img_text">BUKIETY ŚLUBNE</h3>
+                <img src="{{ asset('imgs/work/bukietyslubne.jpg') }}" class="img-responsive" alt="BukietySlubne">
+            </div>
+        </a>
+        <a href="/gallery#baskets">
+            <div class="col-md-4 col-sm-6 s2-col"
+                 data-aos="fade-zoom-in"
+                 data-aos-easing="ease-in-back"
+                 data-aos-delay="200"
+                 data-aos-once="true"
+            >
+                <h3 class="s2-img_text">KOSZE OKOLICZNOŚCIOWE</h3>
+                <img src="{{ asset('imgs/work/koszeokolicznosciowe.jpg') }}" class="img-responsive"
+                     alt="KoszeOkolicznosciowe">
+            </div>
+        </a>
+        <a href="/gallery#wreaths">
+            <div class="col-md-4 col-sm-6 s2-col"
+                 data-aos="fade-zoom-in"
+                 data-aos-easing="ease-in-back"
+                 data-aos-delay="300"
+                 data-aos-once="true"
+            >
+                <h3 class="s2-img_text">FLORYSTYKA POGRZEBOWA</h3>
+                <img src="{{ asset('imgs/work/florystykapogrzebowa.jpg') }}" class="img-responsive"
+                     style="object-position: top"
+                     alt="FlorystykaPogrzebowa">
+            </div>
+        </a>
+        <a href="/gallery#halls">
+            <div class="col-md-4 col-sm-6 s2-col"
+                 data-aos="fade-zoom-in"
+                 data-aos-easing="ease-in-back"
+                 data-aos-delay="400"
+                 data-aos-once="true"
+            >
+                <h3 class="s2-img_text">DEKORACJE SAL</h3>
+                <img src="{{ asset('imgs/work/dekoracjesal.jpg') }}" class="img-responsive"
+                     alt="DekoracjeSal">
+            </div>
+        </a>
+        <a href="/gallery#other">
+            <div class="col-md-4 col-sm-6 s2-col"
+                 data-aos="fade-zoom-in"
+                 data-aos-easing="ease-in-back"
+                 data-aos-delay="500"
+                 data-aos-once="true"
+            >
+                <h3 class="s2-img_text">POZOSTAŁE USŁUGI FLORYSTYCZNE</h3>
+                <img src="{{ asset('imgs/work/pozostaleuslugiflorystyczne.jpg') }}" class="img-responsive"
+                     style="object-position: center left"
+                     alt="PozostaleUslugiFlorystyczne">
+            </div>
+        </a>
     </div>
 </div>
 
 <div class="container-fluid s2-hl-container flex-center">
     <div class="row justify-content-center align-items-center">
         <div class="h-100 w-100">
-            <div class="s2-hl-text flex-wrap-center">
-                Zobacz nasze realizacje!
-            </div>
+            <a href="/gallery">
+                <div class="s2-hl-text flex-wrap-center">
+                    Zobacz nasze realizacje!
+                </div>
+            </a>
             <a href="/gallery">
                 <div class="s2-button-bg">
                     <i class="fas fa-angle-right fa-2x flex-wrap-center"></i>

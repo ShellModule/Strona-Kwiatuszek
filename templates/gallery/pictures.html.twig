@@ -1,29 +1,140 @@
-<div class="container-fluid p-0">
-    <div class="container-fluid gallery-container">
+<div class="container-fluid p-0 gallery">
+    <div class="container gallery-container">
         <div class="gallery-section-wrapper">
             <div class="gallery-section">
-                <div class="gallery-text">
-                    Bukiety
-                </div>
+                <a id="bouquets">
+                    <div class="gallery-text">
+                        Bukiety
+                    </div>
+                </a>
                 <div class="row m-0 p-0">
-                    {% for pic in imgs %}
-                        {% if pic.getPathname()|slice(10)|slice(5, 8) == "bouquets" %}
-                            <div class="col-4 gallery-img">
-                                <img src="{{ asset( pic.getPathname()|slice(10)|replace({'\\':'/'}) ) }}"
-                                     class="img-responsive s2-img"
-                                     alt="FlorystykaPogrzebowa">
+                    {% for pic in bouquets %}
+                        <div class="col-md-3 col-xs-12 col-sm-12 gallery-img">
+                            <div>
+                                <a href="{{ asset( pic.getPathname()|slice(10)|replace({'\\':'/'}) ) }}">
+                                    <img src="{{ asset( pic.getPathname()|slice(10)|replace({'\\':'/'}) ) }}"
+                                         alt="bouquets">
+                                </a>
                             </div>
-                        {% endif %}
+                        </div>
                     {% endfor %}
                 </div>
             </div>
         </div>
-
     </div>
-    <div class="gallery-text">Bukiety ślubne</div>
-    <div class="gallery-text">Kosze okolicznościowe</div>
-    <div class="gallery-text">Wieńce</div>
-    <div class="gallery-text">Dekoracja sal i kościołów</div>
-    <div class="gallery-text">Pozostałe kompozycje</div>
-
+    <div class="container gallery-container">
+        <div class="gallery-section-wrapper">
+            <div class="gallery-section">
+                <a id="wedding_bouquets">
+                    <div class="gallery-text">
+                        Bukiety ślubne
+                    </div>
+                </a>
+                <div class="row m-0 p-0">
+                    {% for pic in wedding %}
+                        <div class="col-md-3 col-xs-12 col-sm-12 gallery-img">
+                            <div>
+                                <a href="{{ asset( pic.getPathname()|slice(10)|replace({'\\':'/'}) ) }}">
+                                    <img src="{{ asset( pic.getPathname()|slice(10)|replace({'\\':'/'}) ) }}"
+                                         alt="wedding">
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container gallery-container">
+        <div class="gallery-section-wrapper">
+            <div class="gallery-section">
+                <a id="baskets">
+                    <div class="gallery-text">
+                        Kosze okolicznościowe
+                    </div>
+                </a>
+                <div class="row m-0 p-0">
+                    {% for pic in baskets %}
+                        <div class="col-md-3 col-xs-12 col-sm-12 gallery-img">
+                            <div>
+                                <a href="{{ asset( pic.getPathname()|slice(10)|replace({'\\':'/'}) ) }}">
+                                    <img src="{{ asset( pic.getPathname()|slice(10)|replace({'\\':'/'}) ) }}"
+                                         alt="baskets">
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container gallery-container">
+        <div class="gallery-section-wrapper">
+            <div class="gallery-section">
+                <a id="wreaths">
+                    <div class="gallery-text">
+                        Wieńce
+                    </div>
+                </a>
+                <div class="row m-0 p-0">
+                    {% for pic in wreaths %}
+                        <div class="col-md-3 col-xs-12 col-sm-12 gallery-img">
+                            <div>
+                                <a href="{{ asset( pic.getPathname()|slice(10)|replace({'\\':'/'}) ) }}">
+                                    <img src="{{ asset( pic.getPathname()|slice(10)|replace({'\\':'/'}) ) }}"
+                                         alt="wreaths">
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container gallery-container">
+        <div class="gallery-section-wrapper">
+            <div class="gallery-section">
+                <a id="halls">
+                    <div class="gallery-text">
+                        Dekoracja sal i kościołów
+                    </div>
+                </a>
+                <div class="row m-0 p-0">
+                    {% for pic in halls %}
+                        <div class="col-md-3 col-xs-12 col-sm-12 gallery-img">
+                            <div>
+                                <a href="{{ asset( pic.getPathname()|slice(10)|replace({'\\':'/'}) ) }}">
+                                    <img src="{{ asset( pic.getPathname()|slice(10)|replace({'\\':'/'}) ) }}"
+                                         alt="halls">
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container gallery-container">
+        <div class="gallery-section-wrapper">
+            <div class="gallery-section">
+                <a id="other">
+                    <div class="gallery-text">
+                        Pozostałe kompozycje
+                    </div>
+                </a>
+                <div class="row m-0 p-0">
+                    {% for pic in other %}
+                        <div class="col-md-3 col-xs-12 col-sm-12 gallery-img">
+                            <div>
+                                <a href="{{ asset( pic.getPathname()|slice(10)|replace({'\\':'/'}) ) }}">
+                                    <img src="{{ asset( pic.getPathname()|slice(10)|replace({'\\':'/'}) ) }}"
+                                         alt="other">
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
