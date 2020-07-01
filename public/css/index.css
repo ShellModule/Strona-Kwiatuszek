@@ -237,7 +237,11 @@ a:hover {
 .navbar-light .navbar-nav .nav-link:hover{
     color: white;
     background-color: rgb(231, 85, 170);
- 
+}
+
+.navbar-light .navbar-nav .nav-link:focus{
+    color: white;
+    text-decoration: none;
 }
 
 .h a{
@@ -321,6 +325,20 @@ a:hover {
 
 }
 
+.h-short{
+    height: 220px;
+    background-attachment: scroll;
+}
+.flex-center-icon{
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform:translateX(-50%);
+}
 
 @media (min-width: 992px) {
     .s2-col {
@@ -412,6 +430,7 @@ a:hover {
         width: 100%;
         left: 0;
         position:fixed;
+        box-shadow: 0px 5px 17px 4px lightgrey;
     }
     .h-logo-m{
     position: absolute;
@@ -438,6 +457,7 @@ a:hover {
         width: 100vw;
         height: 100vh;
         z-index:7;
+
     }
     .nav-item.active{
         background-color: transparent!important;
@@ -503,17 +523,23 @@ a:hover {
         /* display: flex; */
         /* align-items: center; */
         /* justify-content: center; */
+        display: unset;
         position: absolute;
         bottom: 10%;
         left: 50%;
-        transform:translateX(-50%);
+        transform:translateX(-44%);
     }
 
     .h li{
         margin-left: 0px;
     }
+
     a.social-media{
         padding: unset;
     }
 
+    .h-short{
+        
+        height:100px;
+    }
 }

@@ -1,6 +1,10 @@
 {% extends 'base.html.twig' %}
 {% block content %}
-    {% include("gallery/pictures.html.twig") %}
+    <div style="position: relative;
+    z-index: 15;
+    background-color: white;">
+        {% include("gallery/pictures.html.twig") %}
+    </div>
 {% endblock %}
 
 {% block stylesheets %}
