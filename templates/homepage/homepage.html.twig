@@ -1,7 +1,10 @@
 {% extends 'base.html.twig' %}
 {% block content %}
-<div class="content">
-    {% include("homepage/work.html.twig") %}
-    {% include("homepage/opinions.html.twig") %}
-</div>
+    <div class="content">
+        <div style="position: relative; z-index: 15; background-color: white">
+            {% include("homepage/aboutus.html.twig") %}
+            {% include("homepage/work.html.twig") %}
+        </div>
+            {% include("homepage/opinions.html.twig") %}
+    </div>
 {% endblock %}
