@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <div style="position: relative;
+    z-index: 15;
+    background-color: white;">
+        {% include("gallery/pictures.html.twig") %}
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.css"
+          integrity="sha256-oW64+qw5qw6w2kRoRDxPRQyfTXsI8tgQwASQEDn7Yvg=" crossorigin="anonymous"/>
+{% endblock %}
+{% block javascripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.js"
+            integrity="sha256-l/vFiiDil11ljaHyxei7xtZQWjT4kGmvdNo2Ebt2nz8=" crossorigin="anonymous"></script>
+    <script src="{{ asset("scripts/index.js") }}"></script>
+{% endblock %}
+
