@@ -1,81 +1,85 @@
+{% set path = path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params') ) %}
 
-{% set path = path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params') )%}
-
-<div class="container-fluid parallax {{((path == '/gallery') or (path == '/contact')) ? 'h-short' : ''}} " 
-{% if ((path == '/') or (path =='/#1') or (path =='/#2')) %}
-    style="background-image: url({{ asset('imgs/header_homepage/header_bck.jpg')}})"
- {% else %} 
-    style="background-image: url({{ asset('imgs/header_other/header_bck.jpg')}})"
- {% endif %}
-  id="/">
+<div class="container-fluid parallax {{ ((path == '/gallery') or (path == '/contact')) ? 'h-short' : '' }} "
+        {% if ((path == '/') or (path =='/#1') or (path =='/#2')) %}
+            style="background-image: url({{ asset('imgs/header_homepage/header_bck.jpg') }})"
+        {% else %}
+            style="background-image: url({{ asset('imgs/header_other/header_bck.jpg') }})"
+        {% endif %}
+     id="/">
     <div class="mask"></div>
     <div class="container h-container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light h-navbar-m">
             <a class="navbar-brand h-logo-m" href="/">
                 <img src="{{ asset('/imgs/work/logo.png') }}" width="180px" height="180px">
             </a>
-            
+
             {# <button class="navbar-toggler h-hamburger-m" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> #}
-                {# <span class="navbar-toggler-icon"></span> #}
+            {# <span class="navbar-toggler-icon"></span> #}
             {# </button> #}
 
-            <button class="hamburger hamburger--collapse" type="button" onclick="toggleClass(this)"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="hamburger hamburger--collapse" type="button" onclick="toggleClass(this)"
+                    data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
             </button>
 
             <div class="collapse navbar-collapse h-menu-m" id="navbarSupportedContent">
-             
+
                 <ul class="navbar-nav ml-auto h">
-                    <li class="nav-item {{(path == '/') or (path =='/#1') or (path =='/#2') ? 'active' : '' }}">
+                    <li id="navhome"
+                        class="nav-item {{ (path == '/') or (path =='/#1') or (path =='/#2') ? 'active' : '' }}">
                         <a class="nav-link " href="/">Strona główna<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#1">O nas</a>
+                    <li id="navabout" class="nav-item">
+                        <a class="nav-link" href="/#about_us">O nas</a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#2">Oferta</a>
+                    <li id="navoffer" class="nav-item ">
+                        <a class="nav-link" href="/#offer">Oferta</a>
                     </li>
-                    <li class="nav-item {{(path == '/gallery') ? 'active' : '' }}">
+                    <li class="nav-item {{ (path == '/gallery') ? 'active' : '' }}">
                         <a class="nav-link" href="/gallery">Galeria</a>
                     </li>
-                    <li class="nav-item {{(path == '/contact') ? 'active' : '' }}">
+                    <li class="nav-item {{ (path == '/contact') ? 'active' : '' }}">
                         <a class="nav-link" href="/contact">Kontakt</a>
                     </li>
 
                     <div class="flex-center-icon row">
-                        <a href="https://facebook.com/kwiaciarnia.kwiatuszek.mokotow" target="_blank" dmle_dont_remove="target" dm_dont_rewrite_url="true" class="social-media">
+                        <a href="https://facebook.com/kwiaciarnia.kwiatuszek.mokotow" target="_blank"
+                           dmle_dont_remove="target" dm_dont_rewrite_url="true" class="social-media">
 
                             <div class="white-icon">
                                 <i class="fab fa-facebook" style="font-size:1.5rem;"></i>
                             </div>
                         </a>
 
-                        <a href="https://www.instagram.com/kwiaciarnia_na_mokotowie/" target="_blank" dmle_dont_remove="target" dm_dont_rewrite_url="true" class="social-media">
+                        <a href="https://www.instagram.com/kwiaciarnia_na_mokotowie/" target="_blank"
+                           dmle_dont_remove="target" dm_dont_rewrite_url="true" class="social-media">
                             <div class="white-icon">
-                            <i class="fab fa-instagram" style="font-size:1.5rem;"></i>
-                            </div >
+                                <i class="fab fa-instagram" style="font-size:1.5rem;"></i>
+                            </div>
                         </a>
 
-                        <a href="mailto:epkwiatuszek56@gmail.com" target="_blank" dmle_dont_remove="target" dm_dont_rewrite_url="true" class="social-media">
+                        <a href="mailto:epkwiatuszek56@gmail.com" target="_blank" dmle_dont_remove="target"
+                           dm_dont_rewrite_url="true" class="social-media">
                             <div class="white-icon">
-                            <i class="far fa-envelope" style="font-size:1.5rem;"></i>
+                                <i class="far fa-envelope" style="font-size:1.5rem;"></i>
                             </div>
                         </a>
                     </div>
-                    
+
                 </ul>
             </div>
         </nav>
-{{((path == '/gallery') or (path == '/contact')) ? '' :  '
+        {{ ((path == '/gallery') or (path == '/contact')) ? '' :  '
         <h1 class="header-title">
 Kwiaciarnia Kwiatuszek
         </h1>
         <span class="header-title2 float-right">
 ...bo kwiaty to nie tylko ozdoba w wazonie
-        </span>'
-}}
+        </span>' }}
     </div>
 </div>
 
