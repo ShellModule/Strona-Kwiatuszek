@@ -496,37 +496,51 @@
 #map {
     width: 100%;
     height: 400px;
-  }
+}
 
-.contact-container{
+.contact-container {
     position: relative;
-    padding-top: 100px;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-bottom: 50px;
+    padding: 60px 5%;
     background-color: white;
-    z-index:15;
-}
-.cont-icon{
-    position: relative;
-    font-size: 1.7rem;
-    fill: rgba(233, 179, 168, 1);
-    width: 100px;
-    height: 100px;
+    z-index: 15;
 }
 
-.con-text{
-    position: relative;
-    font-family: "Dancing Script";
+.con-col_wrap {
+    margin: 10px 0;
+}
+
+.con-row_wrap {
+    padding: 40px 0;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.con-icon {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.con-flex_wrap {
+    display: inline-flex;
+    padding: 10px 3.5%;
+}
+
+.con-text {
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
     color: #515151;
     font-style: italic;
     font-weight: normal;
     font-size: 48px;
+    word-wrap: break-word;
 }
 
-.con-text2{
+.con-text_content {
     position: relative;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     color: rgba(102, 102, 102, 1);
     font-weight: 300;
     font-size: 16px;
@@ -543,6 +557,12 @@
     .gallery-img {
         width: 210px;
         height: 220px;
+    }
+}
+
+@media screen and (min-width: 565px) and (max-width: 767px) {
+    .con-flex_wrap {
+        width: 100%;
     }
 }
 
@@ -746,6 +766,10 @@
     .about-content {
         margin-bottom: 8px;
     }
+
+    .con-text {
+        font-size: 36px;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -915,4 +939,6 @@
     .opinion-pad {
         padding: 30px 15px 40px 15px;
     }
+
+    .con
 }
