@@ -493,6 +493,45 @@
     font-size: 16px;
 }
 
+#map {
+    width: 100%;
+    height: 400px;
+  }
+
+.contact-container{
+    position: relative;
+    padding-top: 100px;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 50px;
+    background-color: white;
+    z-index:15;
+}
+.cont-icon{
+    position: relative;
+    font-size: 1.7rem;
+    fill: rgba(233, 179, 168, 1);
+    width: 100px;
+    height: 100px;
+}
+
+.con-text{
+    position: relative;
+    font-family: "Dancing Script";
+    color: #515151;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 48px;
+}
+
+.con-text2{
+    position: relative;
+    font-family: "Montserrat";
+    color: rgba(102, 102, 102, 1);
+    font-weight: 300;
+    font-size: 16px;
+}
+
 @media screen and (min-width: 1200px) {
     .gallery-img {
         width: 255px;
