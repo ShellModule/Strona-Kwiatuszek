@@ -1,26 +1,27 @@
 {% extends 'base.html.twig' %}
 {% block content %}
-	<div style="position: relative;
+    <div style="position: relative;
 			    z-index: 15;
 			    background-color: white;">
-		{% include("contact/content.html.twig") %}
-	</div>
+        {% include("contact/content.html.twig") %}
+    </div>
 {% endblock %}
 
 {% block javascripts %}
-	<script>
-		function initMap() {
-var location = {
-lat: 52.1853313,
-lng: 21.0250611
-};
-var map = new google.maps.Map(document.getElementById('map'), {
-zoom: 16,
-center: location
-});
+    <script>
+        function initMap() {
+            var location = {
+                lat: 52.1853313,
+                lng: 21.0250611
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 16,
+                center: location
+            });
 
-var marker = new google.maps.Marker({position: location, map: map});
-}
-	</script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXf80rb8ij3luYwmiqd9iJlRDIWjS7wkc&callback=initMap"></script>
+            var marker = new google.maps.Marker({position: location, map: map});
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBElq0EXv80MtlBDaiXlWw2ZblgDK1AQNw&callback=initMap"></script>
 {% endblock %}
