@@ -663,6 +663,7 @@
     background-color: white;
     border: 3px solid white;
     transition: background-color .2s ease, border-color .2s ease;
+    outline: none;
 }
 
 .label-submit-box:hover input {
@@ -976,8 +977,6 @@
         background-color: rgba(233, 179, 168, 1);
         width: 100vw;
         height: 100vh;
-        z-index: 7;
-
     }
 
     .nav-item.active {
@@ -1077,4 +1076,12 @@
     .opinion-pad {
         padding: 30px 15px 40px 15px;
     }
+}
+
+.alert {
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    position: fixed;
 }

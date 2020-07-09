@@ -2,7 +2,11 @@
 
 namespace App\Controller;
 
+use phpDocumentor\Reflection\Types\Boolean;
+use Swift_Mailer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Finder\Finder;
 
@@ -39,12 +43,32 @@ class HomepageController extends AbstractController
         );
     }
 
-        /**
+    /**
      * @Route("/contact", name="contact")
+     * @param Request $request
+     * @param Swift_Mailer $mailer
+     * @return Response
      */
-    public function contact()
+    public function contact(Request $request, Swift_Mailer $mailer)
     {
+        $data = $request->request->all();
+
+        if ($data) {
+            $message = (new \Swift_Message("Wiadomość ze strony od " . $data['email']))
+                ->setFrom('kwiatuszek.noreply@gmail.com')
+                ->setTo('kwiaciarniamokotow@gmail.com')
+                ->setBody(
+                    "Imię: " . $data['name'] . "\n"
+                    . "Telefon: " . $data['tel'] . "\n"
+                    . "Email: " . $data['email'] . "\n\n"
+                    . "Wiadomość: \n" . $data['msg']
+                );
+
+            $mailer->send($message);
+            $this->addFlash('success', 'Pomyślnie przesłano formularz');
+            return $this->redirectToRoute("contact");
+        }
+
         return $this->render('contact/contact.html.twig');
     }
-
 }
