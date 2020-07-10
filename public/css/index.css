@@ -1112,12 +1112,23 @@
 .alert {
     top: 2%;
     left: 50%;
-    transform: translateX(-50%);
+    text-align: center;
     z-index: 9999;
     position: fixed;
+}
+
+.alert-dismissible .close {
+    outline: none;
+    top: 50%;
+    transform: translateY(-54%);
+    display: block;
 }
 
 .map {
     height: 400px;
     width: 100%;
+}
+
+.lockScroll {
+    overflow: hidden;
 }
