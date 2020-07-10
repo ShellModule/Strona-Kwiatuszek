@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <div style="position: relative;
+			    z-index: 15;
+			    background-color: white;">
+        {% include("contact/content.html.twig") %}
+        {% include("contact/form.html.twig") %}
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/css/ol.css"
+          type="text/css">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/build/ol.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch,requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="{{ asset("scripts/map.js") }}"></script>
+{% endblock %}

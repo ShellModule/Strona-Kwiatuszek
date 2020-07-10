@@ -1,0 +1,53 @@
+<div class="container-fluid form-container"
+     style="background-image: url({{ asset("imgs/contact/background_kontakt-2880w.png") }})">
+    <div class="row form-row_wrap">
+        <div class="col-md-6 col-sm-12 col-xs-12" style="z-index: 1">
+            <form class="row m-0" method="post">
+                <div class="col-md-4 col-sm-12 col-xs-12 form-box">
+                    <label class="label-box">
+                        <input type="text" placeholder="Imię" required name="name"
+                               class="col-md-4 col-sm-12 col-xs-12 form-input">
+                    </label>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12 form-box">
+                    <label class="label-box">
+                        <input type="email" placeholder="Email" required name="email"
+                               class="col-md-4 col-sm-12 col-xs-12 form-input">
+                    </label>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12 form-box">
+                    <label class="label-box">
+                        <input type="tel" placeholder="Telefon" required name="tel"
+                               class="col-md-4 col-sm-12 col-xs-12 form-input">
+                    </label>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 form-box">
+                    <label class="label-box">
+                        <textarea placeholder="Wiadomość" required name="msg"
+                                  class="col-md-12 col-sm-12 col-xs-12 form-input"></textarea>
+                    </label>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 form-consent-box">
+                    <label class="label-box">
+                        <input type="checkbox" required name="form-checkbox">
+                        <span>
+                            Wyrażam zgodę na przetwarzanie przez Kwiaciarnię Kwiatuszek z siedzibą w Warszawie Mozarta 6/718 Warszawa 02-736 (dalej: Administratora danych osobowych) moich danych osobowych w celach marketingowych. Dane osobowe będą przetwarzane przez Administratora zgodnie z przepisami ustawy z dnia 29 sierpnia 1997 roku o ochronie danych osobowych (t.j. z dnia 13 czerwca 2016 r., Dz.U. z 2016 r., poz. 922).
+                        </span>
+                    </label>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 form-submit-box">
+                    <label class="label-submit-box">
+                        <input type="submit" name="form-submit" value="WYŚLIJ">
+                    </label>
+                </div>
+            </form>
+            <span class="form-owner">
+                Administratorem danych osobowych jest Kwiaciarnia Kwiatuszek z siedzibą w Warszawie, ul. Mozarta 6/718, 02-736 Warszawa. Podanie danych osobowych jest dobrowolne, a osobie podającej dane przysługuje prawo dostępu do treści przetwarzanych danych i ich poprawiania oraz usuwania.
+            </span>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12 form-second-row" style="z-index: 1">
+            <div class="form-side-image"
+                 style="background-image: url({{ asset("imgs/contact/anniversary-beautiful-blooming-931177-2880w.jpg") }})"></div>
+        </div>
+    </div>
+</div>

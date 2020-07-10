@@ -9,6 +9,14 @@
      id="/">
     <div class="mask"></div>
     <div class="container h-container">
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Gratulacje!</strong> {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="outline: none">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
         <nav class="navbar navbar-expand-lg navbar-light bg-light h-navbar-m">
             <a class="navbar-brand h-logo-m" href="/">
                 <img src="{{ asset('/imgs/work/logo.png') }}" width="180px" height="180px">
@@ -31,46 +39,63 @@
                 <ul class="navbar-nav ml-auto h">
                     <li id="navhome"
                         class="nav-item {{ (path == '/') or (path =='/#1') or (path =='/#2') ? 'active' : '' }}">
-                        <a class="nav-link " href="/">Strona główna<span class="sr-only">(current)</span></a>
+                        <a class="nav-link " href="/">
+                            <span>
+                                Strona główna
+                            </span>
+                            <span class="sr-only">(current)</span></a>
                     </li>
                     <li id="navabout" class="nav-item">
-                        <a class="nav-link" href="/#about_us">O nas</a>
+                        <a class="nav-link" href="/#about_us">
+                            <span>
+                                O nas
+                            </span>
+                        </a>
                     </li>
                     <li id="navoffer" class="nav-item ">
-                        <a class="nav-link" href="/#offer">Oferta</a>
+                        <a class="nav-link" href="/#offer">
+                            <span>
+                                Oferta
+                            </span>
+                        </a>
                     </li>
                     <li class="nav-item {{ (path == '/gallery') ? 'active' : '' }}">
-                        <a class="nav-link" href="/gallery">Galeria</a>
+                        <a class="nav-link" href="/gallery">
+                            <span>
+                                Galeria
+                            </span>
+                        </a>
                     </li>
                     <li class="nav-item {{ (path == '/contact') ? 'active' : '' }}">
-                        <a class="nav-link" href="/contact">Kontakt</a>
+                        <a class="nav-link" href="/contact">
+                            <span>
+                                Kontakt
+                            </span>
+                        </a>
                     </li>
-
-                    <div class="flex-center-icon row">
-                        <a href="https://facebook.com/kwiaciarnia.kwiatuszek.mokotow" target="_blank"
-                           dmle_dont_remove="target" dm_dont_rewrite_url="true" class="social-media">
-
-                            <div class="white-icon">
-                                <i class="fab fa-facebook" style="font-size:1.5rem;"></i>
-                            </div>
-                        </a>
-
-                        <a href="https://www.instagram.com/kwiaciarnia_na_mokotowie/" target="_blank"
-                           dmle_dont_remove="target" dm_dont_rewrite_url="true" class="social-media">
-                            <div class="white-icon">
-                                <i class="fab fa-instagram" style="font-size:1.5rem;"></i>
-                            </div>
-                        </a>
-
-                        <a href="mailto:epkwiatuszek56@gmail.com" target="_blank" dmle_dont_remove="target"
-                           dm_dont_rewrite_url="true" class="social-media">
-                            <div class="white-icon">
-                                <i class="far fa-envelope" style="font-size:1.5rem;"></i>
-                            </div>
-                        </a>
-                    </div>
-
                 </ul>
+                <div class="flex-center-icon row">
+                    <a href="https://facebook.com/kwiaciarnia.kwiatuszek.mokotow" target="_blank"
+                       class="social-media">
+                        <div class="white-icon">
+                            <i class="fab fa-facebook-f" style="font-size:1.5rem;"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/kwiaciarnia_na_mokotowie/" target="_blank"
+                       class="social-media">
+                        <div class="white-icon">
+                            <i class="fab fa-instagram" style="font-size:1.5rem;"></i>
+                        </div>
+                    </a>
+
+                    <a href="mailto:epkwiatuszek56@gmail.com" target="_blank"
+                       class="social-media">
+                        <div class="white-icon">
+                            <i class="far fa-envelope" style="font-size:1.5rem;"></i>
+                        </div>
+                    </a>
+                </div>
             </div>
         </nav>
         {{ ((path == '/gallery') or (path == '/contact')) ? '' :  '
