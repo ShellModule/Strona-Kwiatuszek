@@ -377,10 +377,6 @@
 
 .flex-center-icon {
     display: none;
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .about-container {
@@ -1073,7 +1069,7 @@
         position: absolute;
         bottom: 10%;
         left: 50%;
-        transform: translateX(-44%);
+        transform: translateX(-51%);
     }
 
     .h li {
@@ -1082,7 +1078,7 @@
 
     a.social-media {
         padding: 0;
-        margin: 12px;
+        margin: 4px;
         text-decoration: none;
     }
 
