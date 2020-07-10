@@ -762,6 +762,13 @@
     z-index: 11;
 }
 
+.alert {
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    position: fixed;
+}
 
 @media screen and (min-width: 992px) {
     .s2-col {
@@ -961,7 +968,7 @@
     }
 
     .hamburger {
-        z-index: 10;
+        z-index: 9999;
         display: block;
     }
 
@@ -1007,7 +1014,6 @@
 
     .navbar-light .navbar-nav .nav-link:hover {
         background-color: transparent !important;
-        background-size: 20% 2px, auto;
         color: white;
     }
 
@@ -1093,9 +1099,9 @@
     .opinion-pad {
         padding: 30px 15px 40px 15px;
     }
-
+  
     .alert {
-        top: 18%;
+        transform: translateX(-50%) translateY(100px);
     }
 }
 
