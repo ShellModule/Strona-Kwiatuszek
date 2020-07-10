@@ -56,7 +56,7 @@ class HomepageController extends AbstractController
         if ($data) {
             $message = (new \Swift_Message("Wiadomość ze strony od " . $data['email']))
                 ->setFrom('kwiatuszek.noreply@gmail.com')
-                ->setTo('kwiaciarniamokotow@gmail.com')
+                ->setTo('mraucinxd@gmail.com')
                 ->setBody(
                     "Imię: " . $data['name'] . "\n"
                     . "Telefon: " . $data['tel'] . "\n"
